@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="assets/qrcode.css.less" rel="stylesheet">
+  <%= stylesheet_link_tag "qrcode" %>
   
 </head>
 <body>
   <h1>QR Teste</h1>
-  <%= render_qr_code("bitcoin:1PiJsjpEy2SmPQSDVuURds7ZU8CAbrMQS7?amount=0.005") %>
+  <%= render_qr_code("bitcoin:#{@order.wallet}?amount=#{@order.amount}") %>
 
   <p>
     <strong>Name:</strong>
